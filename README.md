@@ -11,3 +11,4 @@
 <h4>Features</h4>
 
 <li>User add, delete, edit, list can be fetch from db using url mapping.</li>
+<li>User can search category based for list of users based on that category will shown in response.</li>
