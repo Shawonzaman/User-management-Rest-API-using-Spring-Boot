@@ -24,6 +24,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public List<User> getUserByCountry(String country){
+        return userRepository.findByCountry(country);
+    }
+
     public String deleteUser(int id){
         userRepository.deleteById(id);
         return "User deleted !! " + id;
@@ -34,6 +38,7 @@ public class UserService {
         existingUser.setFirst_name(user.getFirst_name());
         existingUser.setLast_name(user.getLast_name());
         existingUser.setEmail(user.getEmail());
+        existingUser.setCountry(user.getCountry());
         return userRepository.save(existingUser);
     }
 }

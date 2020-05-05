@@ -16,6 +16,7 @@ public class User {
     private String first_name;
     private String last_name;
     private String email;
+    private String country;
 
     public int getId() {
         return id;
@@ -49,4 +50,11 @@ public class User {
         this.email = email;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }

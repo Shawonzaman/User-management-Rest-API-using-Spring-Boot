@@ -25,7 +25,13 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> finAllUsers(){
+
         return userService.getUsers();
+    }
+
+    @GetMapping("/user/{country}")
+    public List<User> findUserByCountry(@PathVariable String country){
+        return userService.getUserByCountry(country);
     }
 
     @PutMapping("/update")
